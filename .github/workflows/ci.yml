@@ -28,8 +28,10 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
         cd backend
-        mvn sonar:sonar \
-          -Dsonar.host.url= http://13.221.110.196:9000/ \
+        mvn clean verify sonar:sonar \
+          -Dsonar.projectKey=game-app \
+          -Dsonar.projectName="Game App Backend" \
+          -Dsonar.host.url=http://13.221.110.196:9000/ \
           -Dsonar.login=${SONAR_TOKEN}
 
     - name: Login to Docker Hub
