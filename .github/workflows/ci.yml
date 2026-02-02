@@ -30,7 +30,7 @@ jobs:
         cd backend
         mvn clean verify sonar:sonar \
           -Dsonar.projectKey=game-app \
-          -Dsonar.projectName="Game App Backend" \
+          -Dsonar.projectName="Game App Backend1" \
           -Dsonar.host.url=http://13.221.110.196:9000/ \
           -Dsonar.login=${SONAR_TOKEN}
 
